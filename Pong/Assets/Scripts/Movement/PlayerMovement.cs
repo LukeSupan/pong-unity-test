@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 
 // This is player 1 movement currently, I will make a player 2 script that just calls this given move2 instead of move1
+
 public class PlayerControl : MonoBehaviour
 {
     // Speed and vectors
@@ -18,8 +19,21 @@ public class PlayerControl : MonoBehaviour
     // Initializes PlayerInputActions script
     private void Awake()
     {
+        // If player1, use W and S, if player 2, use arrow keys, we can use both at once for multiplayer!!!
         playerControls = new PlayerInputActions();
-        move = playerControls.Player.Move1;
+        if (CompareTag("Player1"))
+        {
+            move = playerControls.Player.Move1;
+        }
+        else if (CompareTag("Player2"))
+        {
+            move = playerControls.Player.Move2;
+        }
+        else
+        {
+            Debug.LogError("Invalid tag, this is not a player");
+        }
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

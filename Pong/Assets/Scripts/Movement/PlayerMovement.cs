@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-// This is player 1 movement currently, I will make a player 2 script that just calls this given move2 instead of move1
+// Moves both player 1 and player 2 currently. We don't need to split this in two even with AI as the controllers are different.
 
 public class PlayerControl : MonoBehaviour
 {

@@ -2,30 +2,41 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+// Makes the ball bounce off of walls and paddles, gameManager calls to reset ball, alerts gameManager of score
+
 public class BallMovement : MonoBehaviour
 {
+    private GameManager gameManager; // Reference for gameManager to do everything
 
     // Variables
     private Rigidbody2D _rb;
-    float angle;
-    [SerializeField] float originalSpeed = 5f;
-    float speed = 5f;
-    bool goRight;
-    Vector2 direction;
-    [SerializeField] float ballDelay = 2f;
-    
+    private float angle;
+    private bool goRight;
+    private Vector2 direction;
+    private float speed;
 
-
+    // Game manager variables
+    private float originalSpeed;
+    private float speedMult;
+    private float delay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        gameManager = FindFirstObjectByType<GameManager>();
 
         // At the start, launch the ball in a random direction, within 45 degrees left or 45 degrees right
         goRight = UnityEngine.Random.value > 0.5f; // Randomly decide if going left or right
 
-        StartCoroutine(LaunchBall(ballDelay));
+        originalSpeed = gameManager.ballOriginalSpeed;
+        speedMult = gameManager.ballSpeedMult;
+        delay = gameManager.ballDelay;
+
+        // Speed needs to equal original speed at the start
+        speed = originalSpeed;
+
+        StartCoroutine(LaunchBall(delay));
     }
 
 
@@ -60,7 +71,8 @@ public class BallMovement : MonoBehaviour
 
 
 
-    private void ResetBall()
+    // This is called in gameManager
+    public void ResetBall()
     {
         speed = originalSpeed;
         transform.position = Vector2.zero;
@@ -75,19 +87,17 @@ public class BallMovement : MonoBehaviour
     {
 
         // Check which wall was hit, assign score
-        if (item.gameObject.name == "EdgeColliderLeft")
+        if (item.gameObject.name == "EdgeColliderLeft") // Hits player 1's goal
         {
-            Debug.Log("Player 2 scores!");
-            ResetBall();
+            gameManager.Player2Scored(); // Alert the game manager, who will handle this
         }
-        else if (item.gameObject.name == "EdgeColliderRight")
+        else if (item.gameObject.name == "EdgeColliderRight") // Hits player 2's goal
         {
-            Debug.Log("Player 1 scores!");
-            ResetBall();
+            gameManager.Player1Scored();
         }
-        else if(item.gameObject.layer == LayerMask.NameToLayer("Players"))
+        else if(item.gameObject.layer == LayerMask.NameToLayer("Players")) // If it hits paddles
         {
-            speed = speed * 1.1f;
+            speed = speed * speedMult; // Scaling is fun, so multiply by speedMult
 
             // Get everything to find angle
             float paddleY = item.transform.position.y;
@@ -100,7 +110,13 @@ public class BallMovement : MonoBehaviour
             // Use the angle to give ball new direction, if the ball was going left, make it go right, if going right make it go left
             Vector2 direction = new Vector2((_rb.linearVelocityX > 0 ? -1 : 1), hitFactor).normalized;
 
+            // Set new ball velocity
+            Debug.Log(speed);
             _rb.linearVelocity = direction * speed;
+        } 
+        else if(item.gameObject.name == "EdgeColliderTop" || item.gameObject.name == "EdgeColliderBottom") // If we hit a wall, go opposite way, this is works better than physics
+        {
+            _rb.linearVelocityY = -_rb.linearVelocityY;
         }
 
     }

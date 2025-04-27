@@ -60,7 +60,16 @@ public class PlayerControl : MonoBehaviour
         // Get the moveDirection from input system
         moveDirection = move.ReadValue<Vector2>();
 
-        // Apply the y movement (which is all we get), multiply by movespeed
-        _rb.linearVelocityY = moveDirection.y * movespeed;
+        // Apply the y movement, if at top of screen and trying to go up, don't, if at bottom and going down, also don't
+        if(_rb.position.y >= 4.5 && moveDirection.y > 0)
+        {
+            _rb.linearVelocityY = 0;
+        } else if (_rb.position.y <= -4.5 && moveDirection.y < 0)
+        {
+            _rb.linearVelocityY = 0;
+        } else
+        {
+            _rb.linearVelocityY = moveDirection.y * movespeed;
+        }
     }
 }

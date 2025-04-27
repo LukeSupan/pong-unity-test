@@ -175,3 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5286b756f2b1d6348ada7f68d3d5788c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  ballDelay: 2

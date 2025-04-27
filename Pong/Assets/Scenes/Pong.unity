@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295309738}
   - component: {fileID: 295309739}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: EdgeColliderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390178042}
   - component: {fileID: 390178043}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: EdgeColliderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02372, y: 0.22509, z: 0}
-  m_LocalScale: {x: 16.1, y: 10, z: 1}
+  m_LocalScale: {x: 50, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074309823}
@@ -503,7 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534340295}
   - component: {fileID: 534340294}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: EdgeColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,8 +547,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.881192, y: 4.648683}
-  - {x: 8.150343, y: 4.648683}
+  - {x: -7.881192, y: 4.67}
+  - {x: 8.150343, y: 4.67}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -769,6 +769,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6222294542395532497, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -836,7 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094943953}
   - component: {fileID: 1094943954}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: EdgeColliderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,12 +899,56 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.879656, y: -5.3509536}
-  - {x: 8.150343, y: -5.350954}
+  - {x: -7.879656, y: -5.38}
+  - {x: 8.150343, y: -5.38}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &1225215455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225215457}
+  - component: {fileID: 1225215456}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1225215456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225215455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3782b3feaa87f6542a339c2daef9fed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1225215457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225215455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.33393, y: -1.38462, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670905371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7918721851977009303, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
@@ -936,7 +984,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1027,6 +1075,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3163677178943262836, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3528166465235999508, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1091,3 +1143,4 @@ SceneRoots:
   - {fileID: 924962398}
   - {fileID: 3405836836380076390}
   - {fileID: 2029309275}
+  - {fileID: 1225215457}

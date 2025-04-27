@@ -938,6 +938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3782b3feaa87f6542a339c2daef9fed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballOriginalSpeed: 5
+  ballDelay: 1.75
+  ballSpeedMult: 1.1
+  playerMoveSpeed: 5
   player1Score: 0
   player2Score: 0
   ball: {fileID: 1264055574}

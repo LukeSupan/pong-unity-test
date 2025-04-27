@@ -188,8 +188,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.88, y: -5.4}
-  - {x: -7.88, y: 4.65}
+  - {x: -8.5, y: -5.3645597}
+  - {x: -8.5, y: 4.65}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -263,8 +263,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 8.150922, y: -5.4}
-  - {x: 8.150922, y: 4.6477}
+  - {x: 8.730366, y: -5.6624584}
+  - {x: 8.748087, y: 4.788539}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -540,15 +540,15 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.881192, y: 4.67}
-  - {x: 8.150343, y: 4.67}
+  - {x: -9, y: 4.67}
+  - {x: 9, y: 4.67}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -770,6 +770,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -892,15 +896,15 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.879656, y: -5.38}
-  - {x: 8.150343, y: -5.38}
+  - {x: -9, y: -5.38}
+  - {x: 9, y: -5.38}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -934,6 +938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3782b3feaa87f6542a339c2daef9fed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Score: 0
+  player2Score: 0
+  ball: {fileID: 1264055574}
 --- !u!4 &1225215457
 Transform:
   m_ObjectHideFlags: 0
@@ -942,13 +949,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225215455}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.33393, y: -1.38462, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264055574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+  m_PrefabInstance: {fileID: 3405836836380076390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5286b756f2b1d6348ada7f68d3d5788c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1670905371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7918721851977009303, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
@@ -1075,6 +1093,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3163677178943262836, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3163677178943262836, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: m_IsTrigger
       value: 0

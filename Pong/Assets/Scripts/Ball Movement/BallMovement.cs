@@ -111,7 +111,6 @@ public class BallMovement : MonoBehaviour
             Vector2 direction = new Vector2((_rb.linearVelocityX > 0 ? -1 : 1), hitFactor).normalized;
 
             // Set new ball velocity
-            Debug.Log(speed);
             _rb.linearVelocity = direction * speed;
         } 
         else if(item.gameObject.name == "EdgeColliderTop" || item.gameObject.name == "EdgeColliderBottom") // If we hit a wall, go opposite way, this is works better than physics

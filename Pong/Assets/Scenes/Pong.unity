@@ -941,7 +941,7 @@ MonoBehaviour:
   ballOriginalSpeed: 5
   ballDelay: 1.75
   ballSpeedMult: 1.1
-  playerMoveSpeed: 5
+  playerMoveSpeed: 7.5
   player1Score: 0
   player2Score: 0
   ball: {fileID: 1264055574}

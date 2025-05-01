@@ -949,7 +949,7 @@ MonoBehaviour:
   ballDelay: 1.75
   ballSpeedMult: 1.1
   playerMoveSpeed: 7.5
-  enemyMoveSpeed: 0
+  enemyMoveSpeed: 7.5
   player1Score: 0
   player2Score: 0
   ball: {fileID: 1264055574}
@@ -979,6 +979,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5286b756f2b1d6348ada7f68d3d5788c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1450665185 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7790314404690935324, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+  m_PrefabInstance: {fileID: 3405836836380076390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1670905371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7918721851977009303, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
@@ -1047,6 +1052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d631abef56899647ad8483a448cd697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1450665185}
+  moveDirection: {x: 0, y: 0}
 --- !u!1 &2029309274
 GameObject:
   m_ObjectHideFlags: 0

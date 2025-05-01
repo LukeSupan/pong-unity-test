@@ -90,10 +90,12 @@ public class BallMovement : MonoBehaviour
         if (item.gameObject.name == "EdgeColliderLeft") // Hits player 1's goal
         {
             gameManager.Player2Scored(); // Alert the game manager, who will handle this
+            goRight = false; // Ball goes where it last was scored
         }
         else if (item.gameObject.name == "EdgeColliderRight") // Hits player 2's goal
         {
             gameManager.Player1Scored();
+            goRight = true; // Ball goes where it last was scored
         }
         else if(item.gameObject.layer == LayerMask.NameToLayer("Players")) // If it hits paddles
         {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Controls gameflow, sets score
 // Holds variables for other things, makes it easy to change
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     // Player variables
     public float playerMoveSpeed;
+    public float enemyMoveSpeed;
 
     // Score variables
     public int player1Score = 0;
@@ -25,8 +27,11 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Player 1 Score: {player1Score}");
         ball.ResetBall();
 
-        // When ScoreCheck is checked,
-        ScoreCheck();
+        // Go to menu if someone wins
+        if (ScoreCheck())
+        {
+            SceneManager.LoadSceneAsync("Menu");
+        }
     }
 
     // Player 2 dealings
@@ -36,7 +41,11 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Player 2 Score: {player2Score}");
         ball.ResetBall();
 
-        ScoreCheck();
+        // Go to menu if someone wins
+        if (ScoreCheck())
+        {
+            SceneManager.LoadSceneAsync("Menu");
+        }
     }
 
     // Returns true if game is over, otherwise false
@@ -46,6 +55,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Player 1 wins oh yeah");
             return true;
+
         } else if ((player2Score >= 11) && (player1Score <= (player2Score - 2)))
         {
             Debug.Log("Player 2 wins oh yeah");

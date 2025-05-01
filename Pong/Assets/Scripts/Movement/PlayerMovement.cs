@@ -28,13 +28,16 @@ public class PlayerControl : MonoBehaviour
         {
             move = playerControls.Player.Move1;
         }
-        else if (CompareTag("Player2"))
+        else if (CompareTag("Player2") && (GameSettings.CurrentMode == GameSettings.GameMode.LocalMultiplayer)) // Only activate player 2 if we are in LocalMultiplayer, otherwise, AI script runs
         {
+            this.enabled = true;
             move = playerControls.Player.Move2;
         }
         else
         {
-            Debug.LogError("Invalid tag, this is not a player");
+            // This will occur when the GameMode is singleplayer, this script is not needed in that case
+            this.enabled = false;
+            return;
         }
 
     }
@@ -52,13 +55,13 @@ public class PlayerControl : MonoBehaviour
     // Activates player controls, required
     private void OnEnable()
     {
-        move.Enable();
+        move?.Enable();
     }
 
     // Deactivates player controls, required
     private void OnDisable()
     {
-        move.Disable();
+        move?.Disable();
     }
 
     // Fixed update to make movement smooth

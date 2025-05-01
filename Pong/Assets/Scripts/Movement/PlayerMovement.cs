@@ -7,9 +7,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
+    private GameManager gameManager;
+
+
     // Speed and vectors
     private Rigidbody2D _rb; // Rigidbody2D, we apply velocity to this to move
-    [SerializeField] private float movespeed; // Movespeed can be changed in inspector
+    private float movespeed; // Movespeed, changed in gameManager
     Vector2 moveDirection = Vector2.zero;
 
     // Input
@@ -19,7 +22,7 @@ public class PlayerControl : MonoBehaviour
     // Initializes PlayerInputActions script
     private void Awake()
     {
-        // If player1, use W and S, if player 2, use arrow keys, we can use both at once for multiplayer!!!
+        // If player1, use W and S, if player 2, use arrow keys, we can use both at once for multiplayer
         playerControls = new PlayerInputActions();
         if (CompareTag("Player1"))
         {
@@ -39,7 +42,11 @@ public class PlayerControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         _rb = GetComponent<Rigidbody2D>();
+
+        movespeed = gameManager.playerMoveSpeed;
+
     }
 
     // Activates player controls, required

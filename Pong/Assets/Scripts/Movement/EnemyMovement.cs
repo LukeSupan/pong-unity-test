@@ -15,10 +15,10 @@ public class EnemyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // If we are playing LocalMultiplayer we don't need this script
         if (GameSettings.CurrentMode == GameSettings.GameMode.LocalMultiplayer)
         {
             this.enabled = false;
-            Debug.Log("Uh");
         } else
         {
             this.enabled = true;

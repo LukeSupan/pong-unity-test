@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 // Controls gameflow, sets score
 // Holds variables for other things, makes it easy to change
@@ -18,13 +19,18 @@ public class GameManager : MonoBehaviour
     public int player1Score = 0;
     public int player2Score = 0;
 
+    // Score text variables
+    public TextMeshProUGUI Player1ScoreText;
+    public TextMeshProUGUI Player2ScoreText;
+
+    // Ball to call functions
     public BallMovement ball;
 
     // Player 1 dealings
     public void Player1Scored()
     {
         player1Score++;
-        Debug.Log($"Player 1 Score: {player1Score}");
+        Player1ScoreText.text = player1Score.ToString(); // Update scoretext based on score
         ball.ResetBall();
 
         // Go to menu if someone wins
@@ -38,7 +44,7 @@ public class GameManager : MonoBehaviour
     public void Player2Scored()
     {
         player2Score++;
-        Debug.Log($"Player 2 Score: {player2Score}");
+        Player2ScoreText.text = player2Score.ToString(); // Update scoretext based on score
         ball.ResetBall();
 
         // Go to menu if someone wins
@@ -62,7 +68,6 @@ public class GameManager : MonoBehaviour
             return true;
         }
 
-        Debug.Log("no one wins right now");
 
         return false;
     }

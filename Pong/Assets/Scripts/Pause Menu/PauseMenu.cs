@@ -68,7 +68,6 @@ public class PauseMenu : MonoBehaviour
     // Quit to menu will go back to menu
     public void QuitToMenu()
     {
-        Time.timeScale = 1f; // timeScale would remain 0 if we didn't do this
         SceneManager.LoadSceneAsync("Menu");
     }
 }

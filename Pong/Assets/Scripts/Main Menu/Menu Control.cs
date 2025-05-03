@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuControl : MonoBehaviour
 {
+    private void Awake()
+    {
+        Time.timeScale = 1f; // This resets the timescale if the game was paused when we left to go to menu
+    }
 
     public void Singleplayer()
     {

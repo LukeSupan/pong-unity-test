@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     {
         player1Score++;
         Player1ScoreText.text = player1Score.ToString(); // Update scoretext based on score
-        ball.ResetBall(false);
 
         // Display if someone wins
         if (ScoreCheck())

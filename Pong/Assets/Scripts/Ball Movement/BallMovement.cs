@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor.Analytics;
 using UnityEngine;
 
 // Makes the ball bounce off of walls and paddles, gameManager calls to reset ball, alerts gameManager of score
@@ -72,14 +73,12 @@ public class BallMovement : MonoBehaviour
 
 
     // This is called in gameManager
-    public void ResetBall()
+    public void ResetBall(bool endGame)
     {
         speed = originalSpeed;
         transform.position = Vector2.zero;
         _rb.linearVelocity = direction * 0;
-
-        // Optionally, relaunch the ball in a random direction
-        Start(); // Re-call the Start() method, I don't like this and im changing it, but if this works for now, thats cool
+        if(!endGame) StartCoroutine(LaunchBall(delay));
     }
 
     // If the ball hits the left or right wall, it enters a trigger
@@ -87,12 +86,12 @@ public class BallMovement : MonoBehaviour
     {
 
         // Check which wall was hit, assign score
-        if (item.gameObject.name == "EdgeColliderLeft") // Hits player 1's goal
+        if (item.gameObject.name == "BoxColliderLeft") // Hits player 1's goal
         {
             gameManager.Player2Scored(); // Alert the game manager, who will handle this
             goRight = false; // Ball goes where it last was scored
         }
-        else if (item.gameObject.name == "EdgeColliderRight") // Hits player 2's goal
+        else if (item.gameObject.name == "BoxColliderRight") // Hits player 2's goal
         {
             gameManager.Player1Scored();
             goRight = true; // Ball goes where it last was scored
@@ -115,7 +114,7 @@ public class BallMovement : MonoBehaviour
             // Set new ball velocity
             _rb.linearVelocity = direction * speed;
         } 
-        else if(item.gameObject.name == "EdgeColliderTop" || item.gameObject.name == "EdgeColliderBottom") // If we hit a wall, go opposite way, this is works better than physics
+        else if(item.gameObject.name == "BoxColliderTop" || item.gameObject.name == "BoxColliderBottom") // If we hit a wall, go opposite way, this works better than physics for gameplay in my opinion
         {
             _rb.linearVelocityY = -_rb.linearVelocityY;
         }

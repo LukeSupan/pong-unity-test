@@ -35,7 +35,7 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            // This will occur when the GameMode is singleplayer, this script is not needed in that case
+            // This will occur when the GameMode is singleplayer, this script is not needed on player 2 in that case, and is deactivated
             this.enabled = false;
             return;
         }

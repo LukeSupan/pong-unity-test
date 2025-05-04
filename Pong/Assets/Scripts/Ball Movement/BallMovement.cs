@@ -118,7 +118,14 @@ public class BallMovement : MonoBehaviour
         {
             _rb.linearVelocityY = -_rb.linearVelocityY;
         }
-
     }
+
+    // Need to fix the out of bounds ball somehow
+    void LateUpdate()
+    {
+        Vector2 clampedPos = new Vector2(_rb.position.x, Mathf.Clamp(_rb.position.y, -5.1f, 5.1f));
+        _rb.position = clampedPos;
+    }
+
 
 }

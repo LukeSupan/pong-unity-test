@@ -1426,8 +1426,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2889236005786798786, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
       propertyPath: movespeed
@@ -1517,14 +1525,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1493302804496980229, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7918721851977009303, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670905381}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
 --- !u!1001 &924962398
 PrefabInstance:
@@ -1922,7 +1926,7 @@ MonoBehaviour:
   ballSpeedMult: 1.1
   playerMoveSpeed: 8
   enemyMoveSpeed: 8
-  enemyErrorMargin: 0.5
+  enemyErrorMargin: 0.75
   player1Score: 0
   player2Score: 0
   Player1ScoreText: {fileID: 675877358}
@@ -2293,7 +2297,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 5.507393, y: -1.7979527}
+  m_Offset: {x: 5.507393, y: -1.4729903}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2303,7 +2307,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.050682, y: 0.99497557}
+  m_Size: {x: 18.050682, y: 0.3450508}
   m_EdgeRadius: 0
 --- !u!50 &1450665185 stripped
 Rigidbody2D:
@@ -2625,57 +2629,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1670905371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7918721851977009303, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
-  m_PrefabInstance: {fileID: 885339820}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1670905381
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670905371}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1750399511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,7 +2695,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 5.507393, y: -2.0531454}
+  m_Offset: {x: 5.507393, y: -2.3911061}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2752,7 +2705,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.050682, y: 0.9737358}
+  m_Size: {x: 18.050682, y: 0.29781437}
   m_EdgeRadius: 0
 --- !u!1 &1913419143
 GameObject:

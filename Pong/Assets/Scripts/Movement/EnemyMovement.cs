@@ -56,25 +56,24 @@ public class EnemyMovement : MonoBehaviour
             lastBallVelocity = ballDirection;
         }
 
+        // If you'd like to see the raycast, uncomment this, turn gizmos on while in Game mode and you will see the ray
+        // Debug.DrawRay(ball.position, ball.linearVelocity.normalized * 100f, Color.red);
+
 
         // Make a ray using the ball, head to that rays location, depending on difficulty the margin of error will change
         // origin, direction, distance to check, layer to detect colliders on
         // origin being the ball, direction is where it travels, distance is somewhat abitrary
-
-        Debug.DrawRay(ball.position, ball.linearVelocity.normalized * 100f, Color.red);
-
-        // RaycastHit2D hit = Physics2D.GetRayIntersection(new Ray(ball.position, ball.linearVelocity.normalized), 1000f, wallLayer);
         RaycastHit2D hit = Physics2D.Raycast(ball.position, ball.linearVelocity.normalized, 2000f, LayerMask.GetMask("RayWalls"));
 
         // If we hit a collider, go to the hit location
         if (hit.collider != null)
         {
-            Debug.Log("Ray hit: " + hit.collider.name);
-
             targetPosition = hit.point.y + currentError;
 
-
+            // Only allow the paddle to go between -4.5 and 4.5 on the y axis
             float clampedTargetY = Mathf.Clamp(targetPosition, -4.5f, 4.5f);
+
+            // Move towards for a nice clean movement
             float newY = Mathf.MoveTowards(_rb.position.y, clampedTargetY, movespeed * Time.fixedDeltaTime);
             _rb.MovePosition(new Vector2(_rb.position.x, newY));
 

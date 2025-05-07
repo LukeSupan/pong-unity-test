@@ -120,12 +120,24 @@ public class BallMovement : MonoBehaviour
         }
     }
 
-    // Need to fix the out of bounds ball somehow
+    // Fixes out of bounds bug, on occassion the ball can go through the colliders, this fully prevents it and acts as another set
     void LateUpdate()
     {
-        Vector2 clampedPos = new Vector2(_rb.position.x, Mathf.Clamp(_rb.position.y, -5.1f, 5.1f));
-        _rb.position = clampedPos;
+        Vector2 position = _rb.position;
+        Vector2 velocity = _rb.linearVelocity;
+
+        if (position.y > 5.1f)
+        {
+            position.y = 5.1f;
+            if (velocity.y > 0) velocity.y = -velocity.y;
+        }
+        else if (position.y < -5.1f)
+        {
+            position.y = -5.1f;
+            if (velocity.y < 0) velocity.y = -velocity.y;
+        }
+
+        _rb.position = position;
+        _rb.linearVelocity = velocity;
     }
-
-
 }

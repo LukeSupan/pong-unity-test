@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public float playerMoveSpeed;
     public float enemyMoveSpeed;
     public float enemyErrorMargin;
+    public float enemyReactionError;
+    public float enemyErrorMultiplier;
 
     // Score variables
     public int player1Score = 0;

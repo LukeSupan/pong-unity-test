@@ -23,5 +23,5 @@ I learned a lot about the basics of UI, sound, designing AI, controller support,
 Despite being a lot simpler than my first game, I am more proud of this one, where I did everything and I wasn't distracted by school as much.
 Creating the AI took almost all of the time, I made so many small alterations to it while I made other parts of the game. I found that making the bones was quick. I had a playable version of the local multiplayer within the first few hours of the project.
 
-The sound in this game was found on Freesound by the user NoiseCollector:
-pongblipD5.wav by NoiseCollector -- https://freesound.org/s/4385/ -- License: Attribution 3.0
+The sound in this game was found on Freesound by the user NoiseCollector.
+Pack: Pong softsynth by NoiseCollector -- https://freesound.org/p/254/ -- License: Attribution 3.0

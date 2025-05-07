@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor.Analytics;
 using UnityEngine;
 
@@ -8,6 +9,10 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     private GameManager gameManager; // Reference for gameManager to do everything
+
+    [SerializeField] private AudioClip paddleHitSound;
+    [SerializeField] private AudioClip wallHitSound;
+    [SerializeField] private AudioClip scoreHitSound;
 
     // Variables
     private Rigidbody2D _rb;
@@ -75,6 +80,7 @@ public class BallMovement : MonoBehaviour
     // This is called in gameManager
     public void ResetBall(bool endGame)
     {
+        SoundEffectPlayer.instance.PlaySoundClip(scoreHitSound, transform, 0.1f);
         speed = originalSpeed;
         transform.position = Vector2.zero;
         _rb.linearVelocity = direction * 0;
@@ -98,6 +104,7 @@ public class BallMovement : MonoBehaviour
         }
         else if(item.gameObject.layer == LayerMask.NameToLayer("Players")) // If it hits paddles
         {
+            SoundEffectPlayer.instance.PlaySoundClip(paddleHitSound, transform, 0.1f);
             speed = speed * speedMult; // Scaling is fun, so multiply by speedMult
 
             // Get everything to find angle
@@ -116,6 +123,7 @@ public class BallMovement : MonoBehaviour
         } 
         else if(item.gameObject.name == "BoxColliderTop" || item.gameObject.name == "BoxColliderBottom") // If we hit a wall, go opposite way, this works better than physics for gameplay in my opinion
         {
+            SoundEffectPlayer.instance.PlaySoundClip(wallHitSound, transform, 0.1f);
             _rb.linearVelocityY = -_rb.linearVelocityY;
         }
     }

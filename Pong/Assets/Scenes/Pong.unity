@@ -493,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 500765419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59677, y: 1.64275, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1703,11 +1703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6898200126702747338, guid: bfa480fc75828294891650cfd7cd2718, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6898200126702747338, guid: bfa480fc75828294891650cfd7cd2718, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.26981
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6898200126702747338, guid: bfa480fc75828294891650cfd7cd2718, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1813,7 +1813,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1966944615}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2044,6 +2044,7 @@ MonoBehaviour:
   ball: {fileID: 1264055574}
   Winscreen: {fileID: 723699986}
   WinnerText: {fileID: 18016328}
+  winFirstButton: {fileID: 1913419143}
 --- !u!4 &1225215457
 Transform:
   m_ObjectHideFlags: 0
@@ -2073,6 +2074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 1279110961}
   buttonClick: {fileID: 8300000, guid: 145d7d1f05edfbf4d84f66396755ef38, type: 3}
+  pauseFirstButton: {fileID: 1489675835}
 --- !u!114 &1264055574 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
@@ -2532,15 +2534,15 @@ RectTransform:
   m_GameObject: {fileID: 1489675835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52787, y: 0.52787, z: 0.52787}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 686311655}
   m_Father: {fileID: 874248177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 55}
+  m_AnchoredPosition: {x: 0, y: 73}
   m_SizeDelta: {x: 700, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489675837
@@ -2565,9 +2567,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.7372549, g: 0.7372549, b: 0.7372549, a: 1}
+    m_SelectedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2874,8 +2876,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697748057}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8943498, y: -2.47383, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3020,9 +3022,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.7372549, g: 0.7372549, b: 0.7372549, a: 1}
+    m_SelectedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3132,15 +3134,15 @@ RectTransform:
   m_GameObject: {fileID: 1966944614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52787, y: 0.52787, z: 0.52787}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1103130475}
   m_Father: {fileID: 874248177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -55}
+  m_AnchoredPosition: {x: 0, y: -71}
   m_SizeDelta: {x: 700, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966944616
@@ -3165,9 +3167,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.7372549, g: 0.7372549, b: 0.7372549, a: 1}
+    m_SelectedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3531,6 +3533,18 @@ PrefabInstance:
       propertyPath: speed
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: wallHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c7ef10f16aa80545abb7e0fdc09e7df, type: 3}
+    - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: scoreHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0227c4ff48964da46b79c06a773fe8a7, type: 3}
+    - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: paddleHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b79a930061d5a4d93ae45eb5ef9812, type: 3}
     - target: {fileID: 6330207808443773355, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: m_Name
       value: Ball

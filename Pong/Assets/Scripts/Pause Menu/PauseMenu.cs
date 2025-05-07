@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
 
     [SerializeField] private AudioClip buttonClick;
+    [SerializeField] private GameObject pauseFirstButton;
 
     // Input
     public PlayerInputActions menuControls; // New input system, this is a script that we can use to do lots of controls, in this example I only use move, but any player input can be handled this way
@@ -48,13 +51,16 @@ public class PauseMenu : MonoBehaviour
     public void ToggleMenu()
     {
         SoundEffectPlayer.instance.PlaySoundClip(buttonClick, transform, 0.1f);
-        // Either pause or unpause
+        // Either unpause or pause
         if (pauseMenuCanvas.activeSelf)
         {
             Time.timeScale = 1f;
             pauseMenuCanvas.SetActive(false);
         } else
         {
+            // When the pause menu is opened, select the first button
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
             Time.timeScale = 0f;
             pauseMenuCanvas.SetActive(true);
         }

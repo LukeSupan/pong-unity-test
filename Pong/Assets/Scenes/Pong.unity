@@ -3531,6 +3531,18 @@ PrefabInstance:
       propertyPath: speed
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: wallHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c7ef10f16aa80545abb7e0fdc09e7df, type: 3}
+    - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: scoreHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b79a930061d5a4d93ae45eb5ef9812, type: 3}
+    - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
+      propertyPath: paddleHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0227c4ff48964da46b79c06a773fe8a7, type: 3}
     - target: {fileID: 6330207808443773355, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: m_Name
       value: Ball

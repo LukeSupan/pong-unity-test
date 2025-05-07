@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     // Player variables
     public float playerMoveSpeed;
     public float enemyMoveSpeed;
+    public float enemyErrorMargin;
+    public float enemyReactionError;
+    public float enemyErrorMultiplier;
 
     // Score variables
     public int player1Score = 0;
@@ -35,7 +38,6 @@ public class GameManager : MonoBehaviour
     {
         player1Score++;
         Player1ScoreText.text = player1Score.ToString(); // Update scoretext based on score
-        ball.ResetBall(false);
 
         // Display if someone wins
         if (ScoreCheck())

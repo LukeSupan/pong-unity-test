@@ -1,4 +1,4 @@
-# UnityTest
+# PONG
 
 A test dupe of Pong made in Unity. Created to get a solid foundation with important elements of Unity after my group project Epoch.
 

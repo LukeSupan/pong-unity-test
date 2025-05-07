@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 // Controls gameflow, sets score
 // Holds variables for other things, makes it easy to change
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI WinnerText;
 
     // The first button on the winScreen
-    [SerializeField] private Button firstButton;
+    [SerializeField] private GameObject winFirstButton;
 
     // Player 1 dealings
     public void Player1Scored()
@@ -78,6 +79,8 @@ public class GameManager : MonoBehaviour
             // Edit text to say this and display win screen
             WinnerText.SetText("PLAYER 1 WINS!");
             Winscreen.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(winFirstButton);
 
             return true;
 
@@ -86,6 +89,8 @@ public class GameManager : MonoBehaviour
             // Edit text to say this and display win screen
             WinnerText.SetText("PLAYER 2 WINS!");
             Winscreen.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(winFirstButton);
 
 
             return true;

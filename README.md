@@ -2,8 +2,8 @@
 
 A test dupe of Pong made in Unity. Created to get a solid foundation with important elements of Unity after my group project Epoch.
 
-If you would like to play the web version (not recommended), it is here: https://holeset.itch.io/
-If you would like to play the desktop version (recommended), it is here: https://drive.google.com/drive/folders/1OLYN2rBg7E-uyjXEAyLQPONLTNZMOI9-?dmr=1&ec=wgc-drive-hero-goto
+- If you would like to play the web version (not recommended), it is here: https://holeset.itch.io/
+- If you would like to play the desktop version (recommended), it is here: https://drive.google.com/drive/folders/1OLYN2rBg7E-uyjXEAyLQPONLTNZMOI9-?dmr=1&ec=wgc-drive-hero-goto
 
 The web version was more of a last-minute decision, the game was developed with desktop in mind (it scales well with the majority of screen sizes).
 

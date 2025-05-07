@@ -493,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 500765419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59677, y: 1.64275, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1703,11 +1703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6898200126702747338, guid: bfa480fc75828294891650cfd7cd2718, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6898200126702747338, guid: bfa480fc75828294891650cfd7cd2718, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.26981
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6898200126702747338, guid: bfa480fc75828294891650cfd7cd2718, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2044,6 +2044,7 @@ MonoBehaviour:
   ball: {fileID: 1264055574}
   Winscreen: {fileID: 723699986}
   WinnerText: {fileID: 18016328}
+  firstButton: {fileID: 1489675837}
 --- !u!4 &1225215457
 Transform:
   m_ObjectHideFlags: 0
@@ -2073,6 +2074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 1279110961}
   buttonClick: {fileID: 8300000, guid: 145d7d1f05edfbf4d84f66396755ef38, type: 3}
+  firstButton: {fileID: 1913419145}
 --- !u!114 &1264055574 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
@@ -2874,8 +2876,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697748057}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8943498, y: -2.47383, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3538,11 +3540,11 @@ PrefabInstance:
     - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: scoreHitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 92b79a930061d5a4d93ae45eb5ef9812, type: 3}
+      objectReference: {fileID: 8300000, guid: 0227c4ff48964da46b79c06a773fe8a7, type: 3}
     - target: {fileID: 5947535135091834661, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: paddleHitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 0227c4ff48964da46b79c06a773fe8a7, type: 3}
+      objectReference: {fileID: 8300000, guid: 92b79a930061d5a4d93ae45eb5ef9812, type: 3}
     - target: {fileID: 6330207808443773355, guid: 3a119949987332c4bb8d340083cba079, type: 3}
       propertyPath: m_Name
       value: Ball

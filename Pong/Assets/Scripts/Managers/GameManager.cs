@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 // Controls gameflow, sets score
 // Holds variables for other things, makes it easy to change
@@ -32,6 +33,9 @@ public class GameManager : MonoBehaviour
     // Win Screen canvas and text
     public GameObject Winscreen;
     public TextMeshProUGUI WinnerText;
+
+    // The first button on the winScreen
+    [SerializeField] private Button firstButton;
 
     // Player 1 dealings
     public void Player1Scored()

@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuControl : MonoBehaviour
 {
     [SerializeField] private AudioClip buttonClick;
+    [SerializeField] private Button firstButton;
 
     private void Awake()
     {

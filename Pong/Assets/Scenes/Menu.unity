@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonClick: {fileID: 8300000, guid: 219bbd2781efd9d43ab60d8248bbac47, type: 3}
+  firstButton: {fileID: 631348991}
 --- !u!82 &138214150 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8800467740922992241, guid: bfa480fc75828294891650cfd7cd2718, type: 3}

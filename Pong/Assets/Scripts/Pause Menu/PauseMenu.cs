@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
 
     [SerializeField] private AudioClip buttonClick;
+    [SerializeField] private Button firstButton;
 
     // Input
     public PlayerInputActions menuControls; // New input system, this is a script that we can use to do lots of controls, in this example I only use move, but any player input can be handled this way

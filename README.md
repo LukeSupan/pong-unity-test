@@ -20,7 +20,7 @@ There are a few things that I may go back and add, but I could essentially do th
 My current list of possible future additions includes:
 - A filter to look like an old TV (depends on if it looks good)
 - An endless mode with a high score (you go until you get scored on once by the AI)
-- Slight changes to the menu, I'd change the auto-select to only select once controller input is detected (this is the first change I would make and will likely be done this month)
+- ~~Slight changes to the menu, I'd change the auto-select to only select once controller input is detected (this is the first change I would make and will likely be done this month)~~ This has been fixed, it selects on hover and looks much better
 
 For now, I'm moving on to one of my ideas, my next game should take roughly a month to make, this game was done casually over roughly two weeks.
 

@@ -2518,6 +2518,7 @@ GameObject:
   - component: {fileID: 1489675839}
   - component: {fileID: 1489675838}
   - component: {fileID: 1489675837}
+  - component: {fileID: 1489675840}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -2651,6 +2652,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489675835}
   m_CullTransparentMesh: 1
+--- !u!114 &1489675840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489675835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35f65a12a621fe42b90a6a97fa07ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1644332844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2973,6 +2986,7 @@ GameObject:
   - component: {fileID: 1913419147}
   - component: {fileID: 1913419146}
   - component: {fileID: 1913419145}
+  - component: {fileID: 1913419148}
   m_Layer: 5
   m_Name: ExitToMenu
   m_TagString: Untagged
@@ -3106,6 +3120,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913419143}
   m_CullTransparentMesh: 1
+--- !u!114 &1913419148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913419143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35f65a12a621fe42b90a6a97fa07ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1966944614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,6 +3144,7 @@ GameObject:
   - component: {fileID: 1966944618}
   - component: {fileID: 1966944617}
   - component: {fileID: 1966944616}
+  - component: {fileID: 1966944619}
   m_Layer: 5
   m_Name: ExitToMenu
   m_TagString: Untagged
@@ -3251,6 +3278,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966944614}
   m_CullTransparentMesh: 1
+--- !u!114 &1966944619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966944614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35f65a12a621fe42b90a6a97fa07ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2012430868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7918721851977009303, guid: 4f8f36fed5f06ae40966c929fd4909f1, type: 3}
